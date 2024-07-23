@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+        .cont{
+            /* width: 1800px; */
+            height: 740px;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            max-width: 1000px;
+            position: relative;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        h1 {
+            position: absolute;
+            top: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.5em;
+            font-weight: bold;
+            font-weight: 100;
+            color: aliceblue;
+        }
+        h2 {
+            position: absolute;
+            top: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2em;
+            font-weight: 100;
+            opacity: 0.5;
+        }
+        nav {
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            opacity: 0.8;
+            transform: translate(-50%, 0);
+            font-size: 1.5em;
+            font-weight: 100;
+            display: flex;
+            /* flex-direction: column; */
+            align-items: center;
+            justify-content: space-around;
+            gap: 30px;
+            color: black;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        /* .cont{
+            position: absolute;
+        } */
+        .tit{
+            position: absolute;
+            top: 410px;
+            left: 52%;
+            transform: translateX(-50%);
+            font-size: 1em;
+            font-weight: 100;
+            opacity: 0.6;
+            font-weight: bold;
+            color: black;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        pre{
+            position: absolute;
+            top: 440px;
+            left: 56%;
+            transform: translateX(-50%);
+            font-size: 1em;
+            font-weight: 100;
+            opacity: 0.4;
+            color: black;
+            font-size: small;
+            line-height: 20px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .tit1{
+            position: absolute;
+            top: 570px;
+            left: 30%;
+            transform: translateX(-50%);
+            font-size: 1em;
+            font-weight: 100;
+            opacity: 0.6;
+            font-weight: bold;
+            color: black;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .par2{
+            position: absolute;
+            top: 600px;
+            left: 34%;
+            transform: translateX(-50%);
+            font-size: 1em;
+            font-weight: 100;
+            opacity: 0.4;
+            color: black;
+            font-size: small;
+            line-height: 20px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .plan{
+            position: absolute;
+            top: 750px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5em;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .columns {
+        position: absolute;
+        float: left;
+        width: 33.3%;
+        padding: 8px;
+        }
+        p{
+            position: absolute;
+            top: 790px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 100;
+            opacity: 0.6;
+            text-align: justify;
+            text-align-last: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .tables{
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        .col1 {
+        position: absolute;
+        top: 890px;
+        left: 8%;
+        float: left;
+        width: 28%;
+        padding: 8px;
+        }
+        .price {
+        list-style-type: none;
+        border: 1px solid #eee;
+        margin: 0;
+        padding: 0;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        }
+        .price li {
+        border-bottom: 1px solid #eee;
+        padding: 20px;
+        text-align: center;
+        }
+        .button {
+        background-color: #91e9c9;
+        border: none;
+        color: white;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 30%;
+        }
+        .price .grey {
+            background-color: #bff1c2ec;
+            font-size: 20px;
+        }
+        .price .ttop{
+            background-color: #94f49aec;
+            font-size: 20px;
+        }
+        .price .lig{
+            background-color: #d0e2d1;
+            font-size: 20px;
+        }
+        .col2 {
+        position: absolute;
+        top: 890px;
+        left: 37%;
+        float: left;
+        width: 28%;
+        padding: 8px;
+        }
+        .price .grey2 {
+            background-color: #95cee9ec;
+            font-size: 20px;
+        }
+        .price .ttop2{
+            background-color: #94e6f4ec;
+            font-size: 20px;
+        }
+        .price .lig2{
+            background-color: #c9f3f5;
+            font-size: 20px;
+        }
+        .button2 {
+        background-color: #39e4ed;
+        border: none;
+        color: white;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 30%;
+        }
+        .col3 {
+        position: absolute;
+        top: 890px;
+        left: 65%;
+        float: left;
+        width: 28%;
+        padding: 8px;
+        }
+        .price .grey3 {
+            background-color: #dee89cec;
+            font-size: 20px;
+        }
+        .price .ttop3{
+            background-color: #d5e479ec;
+            font-size: 20px;
+        }
+        .price .lig3{
+            background-color: #e3ebc6;
+            font-size: 20px;
+        }
+        .button2 {
+        background-color: #39e4ed;
+        border: none;
+        color: white;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 30%;
+        }
+        .bott{
+            position: absolute;
+            top: 1300px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.6em;
+            color: black;
+            opacity: 0.6;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .CU{
+            position: absolute;
+            top: 1350px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 100;
+            opacity: 0.6;
+            text-align: justify;
+            text-align-last: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form{
+            position: absolute;
+            top: 1420px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100px;
+            /* width: 100%; */
+
+        }
+        input[type=text] {
+        width: 250px;
+        height: 40px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: transparent;
+        color: white;
+        border: 1px solid black;
+        }
+        input[type=email] {
+        width: 250px;
+        height: 40px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: transparent;
+        color: white;
+        border: 1px solid black;
+        }
+        input[type=subject] {
+        width: 520px;
+        height: 40px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: transparent;
+        color: white;
+        border: 1px solid black;
+        }
+        textarea{
+        width: 530px;
+        height: 40px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        /* position: fixed; */
+        box-sizing: border-box;
+        border: none;
+        background-color: transparent;
+        color: white;
+        border: 1px solid black;
+        }
+        input[type=submit] {
+        width: 80px;
+        height: 40px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: transparent;
+        color: white;
+        border: 1px solid black;
+        }
+        .cir{
+            height: 40px;
+            width: 40px;
+            border: 1px solid rgb(34, 27, 27);
+            border-radius: 50%;
+        }
+        .icons{
+            position: absolute;
+            top: 1950px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100px;
+            display: inline-flex;
+            gap: 20px;
+        }
+        .icons > .cir{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+        footer{
+            position: absolute;
+            top: 2050px;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/Pro-head.jpg" alt="">
+        <img class="cont" src="/Pro-Cont.jpg" alt="">
+        <img src="/Pro-head.jpg" alt="">
+        <h1>Rainbow</h1>
+        <h2>free bootstrap 4.0 theme</h2>
+        <nav>
+            <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Package</a>
+                <a href="#">Elements</a>
+                <a href="#">Contacts</a>
+        </nav>
+        <h1 class="tit">Lorem ipsum dolor</h1>
+        <pre>        Donec mattis ipsum in erat viverra commodo.
+        Proin sapien lacus, euismod eget nisl in,
+        elementum posuere massa. Curabitur a odio
+        eros.Cras aliquam lectus erat,non semper 
+        est volutpat eget.Ut eget erat tincidunt.</pre>
+        <h1 class="tit1">Lorem ipsum dolor</h1>
+
+        <pre class="par2">        Donec mattis ipsum in erat viverra commodo.
+        Proin sapien lacus, euismod eget nisl in,
+        elementum posuere massa. Curabitur a odio
+        eros.Cras aliquam lectus erat,non semper 
+        est volutpat eget.Ut eget erat tincidunt.</pre>
+        <center><h2 class="plan">Select Your Plan</h4></center>
+            <p>Phasellus in magna elementum, tincidunt metus dictum, condimentum eros. Aenean ante erat, blandit quis mi sed, convallis luctus purus. Donec accumsan nulla sed odio.</p>
+            <div class="tables">
+            <div class="col1">
+                <ul class="price">
+                  <li class="ttop">Basic Pack</li>
+                  <li class="grey">10 email Address</li>
+                  <li class="lig">10GB Space</li>
+                  <li class="ttop">100GB Bandwidth</li>
+                  <li class="grey">USD $10 per month</li>
+                  <li class="grey"><a href="#" class="button">BUY</a></li>
+                </ul>
+              </div>
+              <div class="col2">
+                <ul class="price">
+                  <li class="ttop2">Professional Pack</li>
+                  <li class="grey2">20 email Address</li>
+                  <li class="lig2">20GB Space</li>
+                  <li class="ttop2">200GB Bandwidth</li>
+                  <li class="grey2">USD $20 per month</li>
+                  <li class="grey2"><a href="#" class="button2">BUY</a></li>
+                </ul>
+              </div>
+              <div class="col3">
+                <ul class="price">
+                  <li class="ttop3">Gold Pack</li>
+                  <li class="grey3">30 email Address</li>
+                  <li class="lig3">30GB Space</li>
+                  <li class="ttop3">300GB Bandwidth</li>
+                  <li class="grey3">USD $30 per month</li>
+                  <li class="grey3"><a href="#" class="button2">BUY</a></li>
+                </ul>
+              </div>
+            </div>
+        <center><h1 class="bott">Contact Us</h1></center>
+        <p class="CU">Phasellus in magna elementum, tincidunt metus dictum, condimentum eros. Aenean ante erat, blandit quis mi sed, convallis luctus purus. Donec accumsan nulla sed odio.</p>
+        <form>
+            <input type="text" placeholder="Name"> &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="email" placeholder="email">
+            <input type="subject" placeholder="subject">
+            <textarea name="MSG" id="" placeholder="Message"></textarea>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;<input type="submit" placeholder="submit">
+
+        </form>
+        <div class="icons">
+            <div class="cir"><i class="fa-brands fa-facebook"></i></div>
+            <div class="cir"><i class="fa-brands fa-google"></i></i></div>
+            <div class="cir"><i class="fa-brands fa-twitter"></i></i></div>
+            <div class="cir"><i class="fa-brands fa-linkedin"></i></i></div>
+            <div class="cir"><i class="fa-brands fa-discord"></i></i></i></div>
+        </div>
+        <footer>Copyright © 2016 Your Company | Design: Templatemo</footer>
+    </div>
+</body>
+</html>
